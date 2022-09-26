@@ -423,6 +423,19 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "NLog/5.0.4": {
         "type": "package",
         "compile": {
@@ -2535,6 +2548,33 @@
         "dotnet_library_license.txt",
         "netstandard.library.1.6.1.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "NLog/5.0.4": {
@@ -5960,6 +6000,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.8",
       "NLog >= 5.0.4",
       "NLog.Web.AspNetCore >= 5.1.4",
+      "Newtonsoft.Json >= 13.0.1",
       "Pomelo.EntityFrameworkCore.MySql >= 6.0.2",
       "Pomelo.EntityFrameworkCore.MySql.Design >= 1.1.2",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -5972,11 +6013,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\curso\\WebCRUDAPI\\WebCRUDAPI\\WebCRUDAPI.csproj",
+      "projectUniqueName": "C:\\Users\\rorro\\Source\\Repos\\WebApiCrudRepo\\WebCRUDAPI\\WebCRUDAPI.csproj",
       "projectName": "WebCRUDAPI",
-      "projectPath": "C:\\curso\\WebCRUDAPI\\WebCRUDAPI\\WebCRUDAPI.csproj",
+      "projectPath": "C:\\Users\\rorro\\Source\\Repos\\WebApiCrudRepo\\WebCRUDAPI\\WebCRUDAPI.csproj",
       "packagesPath": "C:\\Users\\rorro\\.nuget\\packages\\",
-      "outputPath": "C:\\curso\\WebCRUDAPI\\WebCRUDAPI\\obj\\",
+      "outputPath": "C:\\Users\\rorro\\Source\\Repos\\WebApiCrudRepo\\WebCRUDAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6022,6 +6063,10 @@
           "NLog.Web.AspNetCore": {
             "target": "Package",
             "version": "[5.1.4, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
           },
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\curso\\WebCRUDAPI\\WebCRUDAPI\\WebCRUDAPI.csproj": {}
+    "C:\\Users\\rorro\\Source\\Repos\\WebApiCrudRepo\\WebCRUDAPI\\WebCRUDAPI.csproj": {}
   },
   "projects": {
-    "C:\\curso\\WebCRUDAPI\\WebCRUDAPI\\WebCRUDAPI.csproj": {
+    "C:\\Users\\rorro\\Source\\Repos\\WebApiCrudRepo\\WebCRUDAPI\\WebCRUDAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\curso\\WebCRUDAPI\\WebCRUDAPI\\WebCRUDAPI.csproj",
+        "projectUniqueName": "C:\\Users\\rorro\\Source\\Repos\\WebApiCrudRepo\\WebCRUDAPI\\WebCRUDAPI.csproj",
         "projectName": "WebCRUDAPI",
-        "projectPath": "C:\\curso\\WebCRUDAPI\\WebCRUDAPI\\WebCRUDAPI.csproj",
+        "projectPath": "C:\\Users\\rorro\\Source\\Repos\\WebApiCrudRepo\\WebCRUDAPI\\WebCRUDAPI.csproj",
         "packagesPath": "C:\\Users\\rorro\\.nuget\\packages\\",
-        "outputPath": "C:\\curso\\WebCRUDAPI\\WebCRUDAPI\\obj\\",
+        "outputPath": "C:\\Users\\rorro\\Source\\Repos\\WebApiCrudRepo\\WebCRUDAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -57,6 +57,10 @@
             "NLog.Web.AspNetCore": {
               "target": "Package",
               "version": "[5.1.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",

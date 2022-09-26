@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6O33yHRTNkYQXMkhGI7VIzZ92CUGgsTzaHm5pTK74DoeXt/7HpRjVA/0QcjSkO6q4GSGtF4Kz15EQyHUscQh6g==",
+  "dgSpecHash": "Ojf7vKkfeOtZw8Dx6QNFrZCFE+zB5JVKd4YE8gDdPKZcrTi8Vgw7H4GLS30+z+DBm9hwgZ/f4db6FtlMqj5iXA==",
   "success": true,
-  "projectFilePath": "C:\\curso\\WebCRUDAPI\\WebCRUDAPI\\WebCRUDAPI.csproj",
+  "projectFilePath": "C:\\Users\\rorro\\Source\\Repos\\WebApiCrudRepo\\WebCRUDAPI\\WebCRUDAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rorro\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\rorro\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.8\\microsoft.entityframeworkcore.6.0.8.nupkg.sha512",
@@ -29,6 +29,7 @@
     "C:\\Users\\rorro\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\rorro\\.nuget\\packages\\mysqlconnector\\2.1.2\\mysqlconnector.2.1.2.nupkg.sha512",
     "C:\\Users\\rorro\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+    "C:\\Users\\rorro\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\rorro\\.nuget\\packages\\nlog\\5.0.4\\nlog.5.0.4.nupkg.sha512",
     "C:\\Users\\rorro\\.nuget\\packages\\nlog.extensions.logging\\5.0.4\\nlog.extensions.logging.5.0.4.nupkg.sha512",
     "C:\\Users\\rorro\\.nuget\\packages\\nlog.web.aspnetcore\\5.1.4\\nlog.web.aspnetcore.5.1.4.nupkg.sha512",

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using WebCRUDAPI.Datos;
 using WebCRUDAPI.Models;
 using WebCRUDAPI.Services.Interfaces;
@@ -22,7 +23,7 @@ namespace WebCRUDAPI.Services
             try
             {
                 var zona = await _context.Zonas.ToListAsync();
-                _log.Error("| WebCRUDAPI.Services.ZonasServices | RES: GetZonasToList:  " + zona);
+                _log.Error("| WebCRUDAPI.Services.ZonasServices | RES: GetZonasToList:  " + JsonConvert.SerializeObject(zona));
                 return zona;
             }
             catch (InvalidCastException e)
@@ -45,7 +46,7 @@ namespace WebCRUDAPI.Services
                     SZona = x.SZona,
                     SRegion = x.Regiones.Select(x => x.SRegion).ToList(),
                 }).FirstOrDefaultAsync(x => x.IdZona == id);
-                _log.Info("| WebCRUDAPI.Services.ZonasServices | RES: GetZonaConRegiones: " + zona);
+                _log.Info("| WebCRUDAPI.Services.ZonasServices | RES: GetZonaConRegiones: " + JsonConvert.SerializeObject(zona));
                 return zona;
             }catch(Exception e)
             {
@@ -58,7 +59,7 @@ namespace WebCRUDAPI.Services
         {
             try
             {
-                _log.Info("| WebCRUDAPI.Services.ZonasServices | R: AgregarZona: " + zonaAgregar);
+                _log.Info("| WebCRUDAPI.Services.ZonasServices | R: AgregarZona: " + JsonConvert.SerializeObject(zonaAgregar));
                 var zona = new Zona();
                 zona.IdZona = zonaAgregar.IdZona;
                 zona.SZona = zonaAgregar.SZona;
@@ -80,7 +81,7 @@ namespace WebCRUDAPI.Services
         {
             try
             {
-                _log.Info("| WebCRUDAPI.Services.ZonasServices | R: EditarZona: " + zonaAgregar);
+                _log.Info("| WebCRUDAPI.Services.ZonasServices | R: EditarZona: " + JsonConvert.SerializeObject(zonaAgregar));
                 var zonaToUpadate = await _context.Zonas.FirstOrDefaultAsync(x => x.IdZona == id);
                 if (zonaToUpadate == null)
                 {

@@ -6,6 +6,6 @@
         public int Locker { get; set; }
         public int Casillero { get; set; }
         public DateTime Registrado { get; set; }
-        public DateTime PedidosEntregados { get; set; }
+        public TimeSpan PedidosEntregados { get; set; }
     }
 }
