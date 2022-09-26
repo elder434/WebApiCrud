@@ -12,6 +12,6 @@ namespace WebCRUDAPI.Services.Interfaces
         public Task<List<Entregados>> PedidosCompleto(fechas date);
         public Task<List<Completados>> PedidosPorCompletados(fechas date);
         public Task<List<SinCompletados>> PedidosSinCompletados(fechas date);
-        public Task<List<Object>> PedidoMasRapido(fechas date);
+        public Task<List<IEnumerable<EntregadosEnTiempo>>> PedidoMasRapido(fechas date);
     }
 }

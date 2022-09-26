@@ -206,7 +206,7 @@ namespace WebCRUDAPI.Services
 
 
 
-        public async Task<List<Object>> PedidoMasRapido(fechas date)
+        public async Task<List<IEnumerable<EntregadosEnTiempo>>> PedidoMasRapido(fechas date)
         {
             try
             {
@@ -223,60 +223,60 @@ namespace WebCRUDAPI.Services
 
                 var list = lista.ToList().GroupBy(p => new { p.Oficina, p.Locker, p.Casillero, p.Registrado, p.PedidosEntregados }).Select(p=> p);
 
-                var listaFinal = list.OrderBy(x => x.Key.PedidosEntregados).GroupBy(p => new { p.Key.Oficina, p.Key.Locker, p.Key.Casillero }).Select(x => x.First()).ToList();
-
-
-
-
-
-
-                var final = new List<Object>();
-
-                for (int i = 0; i < listaFinal.Count; i++)
+                var listaFinal = list.OrderBy(x => x.Key.PedidosEntregados).GroupBy(p => new { p.Key.Oficina, p.Key.Locker, p.Key.Casillero }).Select(x => x.First().Select(p=> new EntregadosEnTiempo
                 {
-                    var cadena = "";
-                    var resultadoLista = listaFinal[i].Key.PedidosEntregados;
-
-                    if (resultadoLista.Days > 0)
-                    {
-                        cadena = cadena + resultadoLista.Days.ToString() + " Dias ";
-                    }
-
-                    if (resultadoLista.Hours > 0)
-                    {
-                        cadena = cadena + resultadoLista.Hours.ToString() + " Horas ";
-                    }
-
-                    if (resultadoLista.Minutes > 0)
-                    {
-                        cadena = cadena + resultadoLista.Minutes.ToString() + " Minutos ";
-                    }
-
-                    if (resultadoLista.Seconds > 0)
-                    {
-                        cadena = cadena + resultadoLista.Seconds.ToString() + " Segundos ";
-                    }
+                    locker = p.Locker,
+                    Oficina = p.Oficina,
+                    Casillero = p.Casillero,
+                    FechaRegistro = p.Registrado,
+                    TiempoDentro = ConversionDeTimeSpan(p.PedidosEntregados)
+                })).ToList();
 
 
 
-                    var obj = new
-                    {
-                        locker = listaFinal[i].Key.Locker,
-                        Oficina = listaFinal[i].Key.Oficina,
-                        Casillero = listaFinal[i].Key.Casillero,
-                        FechaRegistro = listaFinal[i].Key.Registrado,
-                        TiempoDentro = cadena,
-                    };
-                    final.Add(obj);
-                }
-                _log.Info("| WebCRUDAPI.Services.FechasServices | RES: PedidoMasRapido:  " + JsonConvert.SerializeObject(final));
-                return final;
+
+
+
+                
+                _log.Info("| WebCRUDAPI.Services.FechasServices | RES: PedidoMasRapido:  " + JsonConvert.SerializeObject(listaFinal));
+                return listaFinal;
             }
             catch (Exception e)
             {
                 _log.Error("| WebCRUDAPI.Services.FechasServices | E: PedidoMasRapido:  " + e);
                 return null;
             }
+        }
+
+
+
+
+
+        private string ConversionDeTimeSpan(TimeSpan tiempo)
+        {
+            var cadena = "";
+
+            if (tiempo.Days > 0)
+            {
+                cadena = cadena + tiempo.Days.ToString() + " Dias ";
+            }
+
+            if (tiempo.Hours > 0)
+            {
+                cadena = cadena + tiempo.Hours.ToString() + " Horas ";
+            }
+
+            if (tiempo.Minutes > 0)
+            {
+                cadena = cadena + tiempo.Minutes.ToString() + " Minutos ";
+            }
+
+            if (tiempo.Seconds > 0)
+            {
+                cadena = cadena + tiempo.Seconds.ToString() + " Segundos ";
+            }
+
+            return cadena;
         }
 
     }
