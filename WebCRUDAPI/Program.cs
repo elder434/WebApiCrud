@@ -14,6 +14,7 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 
 builder.Services.AddScoped<IFechaServices, FechasServices>();
 builder.Services.AddScoped<IZonasServices, ZonasServices>();
+builder.Services.AddScoped<IImagenService, ImagenServices>();
 
 builder.Services.AddDbContext<lockersqaContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("defaultConnection"), Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.30-mysql")));
