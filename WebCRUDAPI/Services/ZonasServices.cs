@@ -23,7 +23,7 @@ namespace WebCRUDAPI.Services
             try
             {
                 var zona = await _context.Zonas.ToListAsync();
-                _log.Error("| WebCRUDAPI.Services.ZonasServices | RES: GetZonasToList:  " + JsonConvert.SerializeObject(zona));
+                _log.Info("| WebCRUDAPI.Services.ZonasServices | RES: GetZonasToList:  " + JsonConvert.SerializeObject(zona));
                 return zona;
             }
             catch (InvalidCastException e)

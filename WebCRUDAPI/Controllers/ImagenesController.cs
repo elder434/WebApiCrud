@@ -15,12 +15,26 @@ namespace WebCRUDAPI.Controllers
             _services = service;
         }
 
-        [HttpGet("convertir imagen base64")]
+        [HttpGet("convertirImagenBase64")]
         public ActionResult ConvertirBase64()
         {
             var cadena = _services.GetImagenBase64();
 
             return Ok(cadena);
+        }
+
+        [HttpGet("insertarZonasDelExcel")]
+        public async Task<ActionResult> InsertExcel()
+        {
+            var datos = await _services.InsertExcel();
+            return Ok(datos);
+        }
+
+        [HttpDelete("eliminarZonasDelExcel")]
+        public async Task<ActionResult> DeleteExcel()
+        {
+            var datos = await _services.DeletetExcel();
+            return Ok(datos);
         }
     }
 }
